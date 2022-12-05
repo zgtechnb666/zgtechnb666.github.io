@@ -16,21 +16,25 @@
   <meta name="author" content="子哥">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="序言node-onebo用pm2，screen守护都不稳定，node-onebot扫码后ctrl+c，pm2没守护直接掉了，screen只能守护几个小时。因为服务器地区与你常登q的位置不同，时常有密码登入验证，导致验证失败。在密码无法登入的情况下，我们可以用go-cqHttp！ 开始部署获取文件12345cd autMan&#x2F;   #进入autMan根目录mkdir go-cqhttp &amp;&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://zgtechnb666.github.io/2022/12/05/hello-world/index.html">
+<meta property="og:title" content="autMan对接go-cqHttp保姆级教程">
+<meta property="og:url" content="http://zgtechnb666.github.io/2022/12/05/autMan%E5%AF%B9%E6%8E%A5go-cqHttp%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="子哥の小破站">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="序言node-onebo用pm2，screen守护都不稳定，node-onebot扫码后ctrl+c，pm2没守护直接掉了，screen只能守护几个小时。因为服务器地区与你常登q的位置不同，时常有密码登入验证，导致验证失败。在密码无法登入的情况下，我们可以用go-cqHttp！ 开始部署获取文件12345cd autMan&#x2F;   #进入autMan根目录mkdir go-cqhttp &amp;&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-05T06:33:41.485Z">
-<meta property="article:modified_time" content="2022-12-05T06:33:41.485Z">
+<meta property="og:image" content="https://images.zgtech.tech/?/images/2022/11/23/JwtqlA3vwn/635794398.png">
+<meta property="og:image" content="https://images.zgtech.tech/?/images/2022/11/23/ecikBey5qp/3357109154.png">
+<meta property="og:image" content="https://images.zgtech.tech/?/images/2022/11/23/XgEfd3brZ9/1995410760.png">
+<meta property="article:published_time" content="2022-12-05T09:39:15.000Z">
+<meta property="article:modified_time" content="2022-12-05T09:40:05.744Z">
 <meta property="article:author" content="子哥">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://images.zgtech.tech/?/images/2022/11/23/JwtqlA3vwn/635794398.png">
   
   
   
-  <title>Hello World - 子哥の小破站</title>
+  <title>autMan对接go-cqHttp保姆级教程 - 子哥の小破站</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="autMan对接go-cqHttp保姆级教程"></span>
           
         </div>
 
@@ -207,7 +211,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-05 14:33" pubdate>
+        <time datetime="2022-12-05 17:39" pubdate>
           2022年12月5日 下午
         </time>
       </span>
@@ -219,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          850 字
         
       </span>
     
@@ -230,7 +234,7 @@
         
         
         
-          4 分钟
+          8 分钟
         
       </span>
     
@@ -268,24 +272,31 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">autMan对接go-cqHttp保姆级教程</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><p>node-onebo用pm2，screen守护都不稳定，node-onebot扫码后ctrl+c，pm2没守护直接掉了，screen只能守护几个小时。因为服务器地区与你常登q的位置不同，时常有密码登入验证，导致验证失败。在密码无法登入的情况下，我们可以用go-cqHttp！</p>
+<h1 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h1><h2 id="获取文件"><a href="#获取文件" class="headerlink" title="获取文件"></a>获取文件</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd autMan/   <span class="hljs-comment">#进入autMan根目录</span><br>mkdir go-cqhttp &amp;&amp; cd go-cqhttp   <span class="hljs-comment">#创建go-cqhttp文件夹并进入</span><br>wget https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Mrs4s/g</span>o-cqhttp<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/v1.0.0-rc3/g</span>o-cqhttp_linux_amd64.tar.gz   <span class="hljs-comment">#拉取go-cqhttp文件</span><br>tar -zxvf go-cqhttp_linux_amd64.tar.gz   <span class="hljs-comment">#解压文件</span><br>./go-cqhttp   <span class="hljs-comment">#启动go-cqhttp</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><img src="https://images.zgtech.tech/?/images/2022/11/23/JwtqlA3vwn/635794398.png" srcset="/img/loading.gif" lazyload alt="配置" title="配置"></p>
+<p>选择 “<strong>3</strong>” ，然后回车，<code>Ctrl+c</code>结束进程</p>
+<p><strong>修改配置文件</strong><br>{fwalert type&#x3D;”warning”}<br>如果是FinalShell，可以双击点开修改{&#x2F;fwalert}</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /root/autMan/go-cqhttp<br>vim config.yml <br></code></pre></td></tr></table></figure>
+<p>英文输入法下，按 <strong>i</strong> ，修改 <code>go-cqhttp</code> 默认配置文件的登陆账号，反代地址</p>
+<p><img src="https://images.zgtech.tech/?/images/2022/11/23/ecikBey5qp/3357109154.png" srcset="/img/loading.gif" lazyload alt="6" title="6"><br><img src="https://images.zgtech.tech/?/images/2022/11/23/XgEfd3brZ9/1995410760.png" srcset="/img/loading.gif" lazyload alt="7" title="7"></p>
+<ul>
+<li>127.0.0.1 为服务器本地（指amtMan和go-cqHttp都在同一服务器）</li>
+<li>8080 为amtMan的端口</li>
+<li>请根据实际情况修改 :ws:&#x2F;&#x2F;127.0.0.1:8080&#x2F;qq&#x2F;receive<br>点击<code>Esc</code>键后输入<code>:wq</code>保存退出</li>
+</ul>
+<h2 id="守护"><a href="#守护" class="headerlink" title="守护"></a>守护</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./go-cqhttp   <span class="hljs-comment">#重新运行</span><br></code></pre></td></tr></table></figure>
+<p>扫码登入后 <code>ctrl+c</code> 结束进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./go-cqhttp -d  <span class="hljs-comment">#后台运行</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="更换机器人"><a href="#更换机器人" class="headerlink" title="更换机器人"></a>更换机器人</h2><p>进入 <code>/go-cqhttp</code>目录把 <code>session.token</code> 文件删除即可然后重新运行扫码绑定</p>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>祝大家部署成功，autMan启航，我呢，自从用了go-cqhttp后就没发生过掉线的事了。</p>
 
                 
               </div>
@@ -303,8 +314,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://zgtechnb666.github.io/2022/12/05/hello-world/</div>
+      <div>autMan对接go-cqHttp保姆级教程</div>
+      <div>http://zgtechnb666.github.io/2022/12/05/autMan对接go-cqHttp保姆级教程/</div>
     </div>
     <div class="license-meta">
       
@@ -348,15 +359,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/05/jsproxy-cf/" title="使用CF Wocker搭建在线代理">
+                      <a href="/2022/12/05/QQ%E6%9C%BA%E5%99%A8%E4%BA%BAAutMan%E5%AE%89%E8%A3%85%E5%8F%8A%E5%AF%B9%E6%8E%A5/" title="QQ机器人AutMan安装及对接">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">使用CF Wocker搭建在线代理</span>
+                        <span class="hidden-mobile">QQ机器人AutMan安装及对接</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/12/05/%E7%A0%B4%E8%A7%A3CSDN%E5%A4%8D%E5%88%B6%E5%92%8C%E5%85%B3%E6%B3%A8%E9%99%90%E5%88%B6/" title="破解CSDN复制和关注限制">
+                        <span class="hidden-mobile">破解CSDN复制和关注限制</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
