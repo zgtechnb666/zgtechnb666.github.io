@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>搭建Heimdall导航页项目</title>
+    <link href="/2022/12/27/%E6%90%AD%E5%BB%BAHeimdall%E5%AF%BC%E8%88%AA%E9%A1%B5%E9%A1%B9%E7%9B%AE/"/>
+    <url>/2022/12/27/%E6%90%AD%E5%BB%BAHeimdall%E5%AF%BC%E8%88%AA%E9%A1%B5%E9%A1%B9%E7%9B%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><blockquote><p>众所周知，Heimdall是一款好看的导航页项目，部署方便，外观简约，十分实用，子哥今天分享给大家。</p></blockquote><h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p><img src="https://gh.zgtech.icu/https://github.com/zgtechnb666/images/blob/main/20221227183334.png" alt="预览" title="预览"> </p><h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="使用Docker-compose"><a href="#使用Docker-compose" class="headerlink" title="使用Docker-compose"></a>使用Docker-compose</h2><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><span class="hljs-attribute">version</span>: &quot;2.1&quot;<br><span class="hljs-attribute">services</span>:<br><span class="hljs-attribute">heimdall</span>:<br><span class="hljs-attribute">image</span>: lscr.io/linuxserver/heimdall:latest<br><span class="hljs-attribute">container_name</span>: heimdall<br><span class="hljs-attribute">environment</span>:<br><span class="hljs-literal">-</span> PUID=1000<br><span class="hljs-literal">-</span> PGID=1000<br><span class="hljs-literal">-</span> TZ=Europe/London<br><span class="hljs-attribute">volumes</span>:<br><span class="hljs-literal">-</span> /path/to/appdata/config:/config<br><span class="hljs-attribute">ports</span>:<br><span class="hljs-literal">-</span> 7001:80<br><span class="hljs-literal">-</span> 7002:443<br><span class="hljs-attribute">restart</span>: unless-stopped<br></code></pre></td></tr></table></figure><h2 id="使用Docker"><a href="#使用Docker" class="headerlink" title="使用Docker"></a>使用Docker</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">docker <span class="hljs-built_in">run</span> -d <span class="hljs-attribute">--name</span>=heimdall -p 8080:80 -p 8081:443 -v /home/docker/heimdall:<span class="hljs-built_in">/config </span><span class="hljs-attribute">--restart</span>=unless-stopped linuxserver/heimdall<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>自己搭建一个二级域名分发平台</title>
     <link href="/2022/12/27/%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%88%86%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
     <url>/2022/12/27/%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%88%86%E5%8F%91%E5%B9%B3%E5%8F%B0/</url>
