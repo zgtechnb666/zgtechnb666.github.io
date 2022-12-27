@@ -6,7 +6,7 @@
   <link href="http://zgtechnb666.github.io/atom.xml" rel="self"/>
   
   <link href="http://zgtechnb666.github.io/"/>
-  <updated>2022-12-13T02:50:09.986Z</updated>
+  <updated>2022-12-27T10:15:30.491Z</updated>
   <id>http://zgtechnb666.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己搭建一个二级域名分发平台</title>
+    <link href="http://zgtechnb666.github.io/2022/12/27/%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%88%86%E5%8F%91%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://zgtechnb666.github.io/2022/12/27/%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D%E5%88%86%E5%8F%91%E5%B9%B3%E5%8F%B0/</id>
+    <published>2022-12-27T10:13:51.000Z</published>
+    <updated>2022-12-27T10:15:30.491Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><blockquote><p>快乐二级域名分发可以说是二级域名分发程序的扛把子了，几年前挺流行的，这里分享一个能用的进行了简约美化的版本。</p></blockquote><h1 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h1><p><a href="https://cloud.zgtech.icu/s/gnfB">点击这里</a>进行源码下载。</p><h1 id="搭建实例"><a href="#搭建实例" class="headerlink" title="搭建实例"></a>搭建实例</h1><p><strong><a href="https://dns.zgtech.asia/">子哥二级域名分发</a></strong></p><h1 id="源码演示"><a href="#源码演示" class="headerlink" title="源码演示"></a>源码演示</h1><p><img src="https://gh.zgtech.icu/https://github.com/zgtechnb666/images/blob/main/6666666.png" alt="源码演示" title="源码演示"> </p><h1 id="部署教程"><a href="#部署教程" class="headerlink" title="部署教程"></a>部署教程</h1><ol><li>设置 <code>php</code> 版本为<strong>74</strong>。</li><li>设置站点伪静态为 <code>Thinkphp</code> 。</li><li>访问 <code>域名/install</code> 按照提示进行安装。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;序言&quot;&gt;&lt;a href=&quot;#序言&quot; class=&quot;headerlink&quot; title=&quot;序言&quot;&gt;&lt;/a&gt;序言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;快乐二级域名分发可以说是二级域名分发程序的扛把子了，几年前挺流行的，这里分享一个能用的进行了简约美化的版本。&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>搭建QQ机器人对接chatGPT</title>
